@@ -1,0 +1,335 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Masters/Doctoral Thesis 
+% LaTeX Template
+% Version 1.43 (17/5/14)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original authors:
+% Steven Gunn 
+% http://users.ecs.soton.ac.uk/srg/softwaretools/document/templates/
+% and
+% Sunil Patel
+% http://www.sunilpatel.co.uk/thesis-template/
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Note:
+% Make sure to edit document variables in the Thesis.cls file
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt, oneside]{Thesis} % The default font size and one-sided printing (no margin offsets)
+
+\graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
+
+\usepackage[square, numbers, comma, sort&compress]{natbib} % Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' 
+\hypersetup{urlcolor=blue, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
+
+\usepackage[french]{babel}
+\usepackage{graphicx} 
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[T1]{fontenc}
+\usepackage{eurosym}
+\usepackage{booktabs}
+\usepackage{lscape}
+\usepackage{multirow}
+\usepackage{supertabular}
+\usepackage[autostyle]{csquotes}
+\usepackage{pdfpages}
+\title{\ttitle} % Defines the thesis title - don't touch this
+
+\begin{document}
+
+\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
+
+\setstretch{1.3} % Line spacing of 1.3
+
+% Define the page headers using the FancyHdr package and set up for one-sided printing
+\fancyhead{} % Clears all page headers and footers
+\rhead{\thepage} % Sets the right side header to show the page number
+\lhead{} % Clears the left side page header
+
+\pagestyle{fancy} % Finally, use the "fancy" page style to implement the FancyHdr headers
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % New command to make the lines in the title page
+
+% PDF meta-data
+\hypersetup{pdftitle={\ttitle}}
+\hypersetup{pdfsubject=\subjectname}
+\hypersetup{pdfauthor=\authornames}
+\hypersetup{pdfkeywords=\keywordnames}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{titlepage}
+
+
+\begin{center}
+
+\centering
+	\includegraphics[width=0.4 \textwidth]{Figures/lille2.png}
+    \hfill
+    \includegraphics[width=0.3 \textwidth]{Figures/ULB.pdf}
+
+
+\textsc{\LARGE Université de Lille II \\Université Libre de Bruxelles}\\[1.5cm] % University name
+\textsc{\textbf{\LARGE Thèse}}\\[0.1cm] % Thesis type
+
+\HRule \\[0.2cm] % Horizontal line
+{\huge \bfseries \ttitle}\\[0.2cm] % Thesis title
+\HRule \\[0.2cm] % Horizontal line
+
+ 
+
+\begin{center} \large
+
+{\LARGE \bf \authornames} \\
+
+\emph{Soutenue publiquement à Lille, le 16/12/2015 devant la commission d'examen} 
+\end{center}
+
+\begin{flushleft} \large
+
+\begin{tabular} {llcl} \large
+	\textit {Rapporteurs:} & Jacques \textsc{Gautrais} & - & CNRS (Toulouse) \\ & François \textsc{Verheggen} & - & Agro-Bio-Tech (Gembloux) \\
+    
+    \textit{Membres :} & Denis \textsc{Fournier} & - & ULB (Bruxelles)\\ & Pr. Thierry \textsc{Hance} & - & UCL (Louvain)\\ & Pr. Norbert \textsc{Telmon} & - & Univ. Toulouse III (Toulouse)\\
+    
+	\textit{Directeurs :} & Pr. Jean-Louis \textsc{Deneubourg} & - & ULB (Bruxelles) \\ & Pr. Valéry \textsc{Hédouin} & - & Univ. Lille II (Lille) \\ 
+    
+    \textit{Co-Directeur :} & Damien \textsc{Charabidzé} & - & Univ. Lille II (Lille)
+       
+\end{tabular}
+\end{flushleft}
+	
+\large \textit{Thèse présentée devant l'Université de Lille 2 et l'Université Libre de Bruxelles pour obtenir le grade de Docteur en Biologie des organismes et \\ Docteur ès Sciences}\\[0.2cm] % University requirement text
+
+\begin{flushleft} \large
+\groupname % Research group name and department name
+ 
+\end{flushleft}
+
+\begin{center}
+\textsc{École Doctorale Biologie-Santé \\ Formation Doctorale en Sciences}
+\end{center}
+
+\vfill
+ \end{center}	
+\end{titlepage}
+
+\cleardoublepage
+
+%----------------------------------------------------------------------------------------
+%	DECLARATION PAGE
+%	Your institution may give you a different text to place here
+%----------------------------------------------------------------------------------------
+
+
+
+%----------------------------------------------------------------------------------------
+%	QUOTATION PAGE
+%----------------------------------------------------------------------------------------
+\setboolean{@twoside}{true}
+\pagestyle{empty} % No headers or footers for the following pages
+
+\null\vfill % Add some space to move the quote down the page a bit
+
+\textit{``If we use excessively elaborate apparatus to examine simple natural phenomena nature herself may escape us."}
+
+\begin{flushright}
+Karl von Frisch (1886-1982)
+\end{flushright}
+
+\textit{``Il est facile de développer d'abord une théorie et de l'appuyer ensuite par des exemples, car la nature est si riche et si variée qu'en cherchant bien, on trouve toujours des exemples apparemment convaincants, même pour une théorie complètement aberrante."}
+
+\begin{flushright}
+Konrad Lorenz (1903-1989)
+\end{flushright}
+
+\textit{``In the course of thirty years devoted to ethological studies I have become increasingly convinced that the fairest characterisation of Ethology is \textit{"the biological study of behaviour"}. By this I mean that the science is characterised by an observable phenomenon (behaviour, or movement), and by a type of approach, a method of study (the biological method)."}
+
+\begin{flushright}
+Nikolaas Tinbergen (1907-1988)
+\end{flushright}
+
+
+
+\vfill\vfill\vfill\vfill\vfill\vfill\null % Add some space at the bottom to position the quote just right
+
+
+
+\cleardoublepage % Start a new page
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT PAGE FRENCH
+%----------------------------------------------------------------------------------------
+
+\addtotoc{Résumé/Abstract} % Add the "Abstract" page entry to the Contents
+
+\abstract{\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
+
+Le comportement d'agrégation est considéré comme le premier pas vers des niveaux de socialité supérieurs. La compréhension des facteurs clés permettant l’émergence des décisions collectives chez les groupes composés d’individus simples (ayant une connaissance limitée de leur environnement) est donc fondamentale pour étudier l’évolution de la socialité. A l'heure actuelle, la majorité des études se sont focalisées sur les espèces les plus sociales, et notamment celles formant des groupes monospécifiques. \textit{A contrario}, les larves nécrophages de Diptères (asticots) forment sur un même cadavre des agrégats hétérospécifiques pouvant contenir des milliers d'individus, leur offrant divers bénéfices (production de chaleur, d’enzymes). De part ces observations \textit{in natura}, ces insectes apparaissent être un bon modèle biologique dans un contexte évolutif d'étude des comportements collectifs. Ce travail de thèse s'attache à mettre en évidence et quantifier les phénomènes d'agrégations des larves de \textit{Lucilia sericata} (Diptera: Calliphoridae) et les mécanismes qui sous-tendent ces regroupements. Après une description introductive des groupes hétérospécifiques chez les arthropodes, nous présentons pour la première fois la démonstration expérimentale d'un comportement d’agrégation actif des larves. Nous avons également démontré l'effet d'attraction/rétention sur les larves d'un composé cuticulaire déposé au sol par les individus et reconnu par leurs congénères. Cette reconnaissance se fait probablement via l'utilisation d'un comportement exploratoire caractéristique que nous avons décrit et quantifié: le scanning. Puis, nous avons mis en évidence la capacité des larves de deux espèces proches phylogénétiquement et écologiquement, \textit{L. sericata} et \textit{Calliphora vomitoria}, à faire un choix collectif en groupe monospécifique comme en hétérospécifique. Ces résultats suggèrent l'existence d'une reconnaissance interspécifique de vecteurs d'agrégation (e.g. le signal larvaire). Enfin, nous avons mis en évidence l'existence de préférendums thermiques chez ces espèces, et la capacité des larves à sélectionner collectivement cette température préférentielle. Dans son ensemble, ce travail offre des connaissances inédites sur la vie de ces groupes. Il ouvre des perspectives d'étude prometteuses sur les comportements collectifs interspécifiques et les bénéfices évolutifs liés à l'agrégation. 
+}
+
+\clearpage % Start a new page
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT PAGE ENGLISH
+%----------------------------------------------------------------------------------------
+\thispagestyle{empty}
+  \null\vfil
+	\begin{center}
+		\setlength{\parskip}{0pt}
+		{\huge{\textit{Abstract}} \par}
+    	\bigskip
+        {\textsc{\textbf{Aggregation behaviour of necrophagous Diptera larvae: \\from individual to collective}} \par} % Thesis title
+    	\medskip
+	\end{center}
+
+Aggregation behaviour is considered as the first step toward higher level of sociality. The understanding of the key factors that permit the emergence of a collective decision in a large group composed of simple individuals (having a limited knowledge of their close environment) is fundamental to deciphering the evolution of sociality. To date, a large majority of the publications are focused on eusocial species, especially those forming monospecific groups. Conversely, necrophagous Diptera larvae (maggot) form large heterospecific groups that can contain thousands individuals on a same decaying carrion, which offer several benefits (heat production, enzymes). Regarding these observations, such insects appear as a good biological model in the evolutionary context of the study of collective behaviour. This thesis work aim to highlight and quantify aggregation phenomenon in \textit{Lucilia sericata} larvae (Diptera: Calliphoridae) and mechanisms underlying such grouping. After a descriptive introduction about mixed-species groups in arthropods, we demonstrated, for the first time, an active aggregation behaviour of larvae. We also highlighted an attractive/retentive effect on larvae of cuticular signal deposit on the ground by individuals and recognize by congeners. Such chemical recognition was probably due to the utilization of a characteristic exploratory behaviour which we described and quantified: the scanning. Then, we highlighted the ability of two phylogenetically and ecologically close related species, \textit{L. sericata} and \textit{Calliphora vomitoria}, to collectively choose in monospecific and heterospecific groups. These results suggested the existence of an interspecific recognition of aggregation cues (e.g. larval signal). Finally, we highlighted specific thermal preferendum, and the ability of larvae to collectively choose such temperature. As a whole, this thesis work offer original knowledges about social life of such groups. It opens up promising perspectives on the study of interspecific collective behaviour and evolutionary benefits of aggregation.
+
+\cleardoublepage
+%----------------------------------------------------------------------------------------
+%	ACKNOWLEDGEMENTS
+%----------------------------------------------------------------------------------------
+
+\setstretch{1.3} % Reset the line-spacing to 1.3 for body text (if it has changed)
+
+
+\acknowledgements{\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
+
+Merci à Mr. le Doyen Didier \textsc{Gosset} de m'avoir permis de continuer en thèse après mon Master 2.
+
+Je remercie le Pr. Valéry \textsc{Hédouin} et toute l'équipe de médecins légistes, garçons de morgue, secrétaires pour l'accueil au sein de l'Institut de Médecine Légale. Ce fût un réel plaisir de travailler avec vous. 
+
+Merci à l'incontournable dès qu'il s'agit des comportements collectifs, Jean-Louis \textsc{Deneubourg}. Tu as toujours été une oreille attentive s'agissant de mes travaux. J'ai appris énormément à tes côtés et ça m'aidera pour longtemps après cette thèse. 
+
+Merci aux membres de ce jury Denis \textsc{Fournier}, Jacques \textsc{Gautrais}, Pr. Thierry \textsc{Hance}, Pr. Norbert \textsc{Telmon} et François \textsc{Verheggen} d'avoir accepter de juger mon travail. 
+
+Bien évidemment, je remercie très chaleureusement Damien "MisterFly" \textsc{Charabidzé}. Le chef que tout doctorant aimerait avoir. Merci Damien de m'avoir accompagner depuis le Master 2 jusqu'ici. Je serai très heureux de continuer à travailler avec toi sur ces merveilleuses bêtes que sont les asticots. Je serai d'ailleurs aussi partant pour d'autres soirées, sorties bar et concerts ;).
+
+Un grand merci à Cindy "LadyBug" \textsc{Aubernon}, une collègue unique tant par son caractère que par ses connaissances scientifiques. C'est aussi grâce à toi que cette thèse a pu aboutir. Je te souhaite pleins de bonnes choses pour la suite de ta thèse et surtout avec la famille que vous voulez fonder Vivien et toi. 
+
+Merci aux anthropos, Thomas "Docteur Skull" \textsc{Colard}, Maxime "ArkeoBoy" \textsc{Lemoine}, Marion "Miss Os" \textsc{Richard} et Pierre \textsc{Marchandise} pour la sympathie au quotidien, l'animation du labo et les soirées. Changez rien. 
+
+Merci aux bruxellois Grégory \textsc{Sempo}, Alexandre \textsc{Campo} pour les discussions autour de la modélisation de mes bestioles. Merci à Cédric \textsc{Devigne} pour ces échanges depuis le Master 2.
+
+Merci à Georges \textsc{Lognay} et toute son équipe ainsi que François pour cet accueil chaleureux à Gembloux. 
+
+Merci aux stagiaires Licence et Master, ils (bien souvent elles) sont nombreux à avoir participé de près ou de loin à ce travail avec leur enthousiasme de jeunes scientifiques. 
+
+Merci aux compagnons rennais de Master, l"Etho-Ghetto-Crew". Hâte de vous retrouver en congrès ou ailleurs pour boire un coup. 
+
+Merci aux volleyeurs du mercredi midi. Merci aux membres du bureau de BioAddoct, je suis content d'avoir modestement participé à relancer cette asso et heureux de voir qu'elle est bien partie pour perdurer après moi. 
+
+Merci aux amis lillois, notamment Laura et Anne-So. 
+
+Un grand merci à mes amis de toujours et pour encore très longtemps Alexis, Alice, Carole, Damien, Élise, Louis, Mathilde, Nora, Raphaël et Théophile. Je vous aime p****n! 
+
+Merci à ma famille présente dans le Nord. A celle présente en Suisse, je continuerai à t'envoyer des mails de mes péripéties Tonton Marc.
+
+Merci à mes parents qui m'ont toujours laissé faire ce que j'aimais. Merci à mes p'tits frères Arnaud et Maxime. 
+
+Enfin, un grand merci à celle qui m'a accompagné pendant cette thèse, Perrine. Je te souhaite tout le meilleur pour la suite.
+
+\begin{flushright}
+Julien "IncredibleMaggot"
+\end{flushright}
+}
+
+
+\cleardoublepage
+
+%----------------------------------------------------------------------------------------
+%	LIST OF CONTENTS/FIGURES/TABLES PAGES
+%----------------------------------------------------------------------------------------
+\pagestyle{fancy} % The page style headers have been "empty" all this time, now use the "fancy" headers as defined before to bring them back
+
+\lhead{\emph{Table des matières}} % Set the left side page header to "Contents"
+
+
+\addto\captionsfrench{% Replace "english" with the language you use
+  \renewcommand{\contentsname}%
+    {Table des matières}%
+}
+
+\tableofcontents % Write out the Table of Contents
+
+%----------------------------------------------------------------------------------------
+%	DEDICATION
+%----------------------------------------------------------------------------------------
+
+\setstretch{1.3} % Return the line spacing back to 1.3
+
+\pagestyle{empty} % Page style needs to be empty for this page
+
+\dedicatory{A Grand-Papa\ldots} % Dedication text
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - CHAPTERS
+%----------------------------------------------------------------------------------------
+
+\mainmatter % Begin numeric (1,2,3...) page numbering
+
+\pagestyle{fancy} % Return the page headers back to the "fancy" style
+
+% Include the chapters of the thesis as separate files from the Chapters folder
+% Uncomment the lines as you write the chapters
+
+\input{Chapters/Introduction}
+\input{Chapters/Methodo}
+\input{Chapters/Chapter1}
+\input{Chapters/Chapter2}
+\input{Chapters/Chapter3}
+\input{Chapters/Chapter4}
+\input{Chapters/Chapter5}
+\input{Chapters/Discussion}
+
+\clearpage
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%--------------------------------------------------------------------------------------
+\addtotoc{Bibliographie générale}
+\label{Bibliographie générale}
+
+\lhead{\emph{Bibliographie générale}} % Change the page header to say "Bibliography"
+
+\bibliographystyle{unsrtnat-fr} % Use the "unsrtnat" BibTeX style for formatting the Bibliography
+
+\bibliography{Bibliography.bib} % The references (bibliography) information are stored in the file named "Bibliography.bib"
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - APPENDICES
+%----------------------------------------------------------------------------------------
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+\appendix % Cue to tell LaTeX that the following 'chapters' are Appendices
+
+% Include the appendices of the thesis as separate files from the Appendices folder
+% Uncomment the lines as you write the Appendices
+
+\input{Appendices/Appendix1}
+\input{Appendices/Appendix2}
+\input{Appendices/Appendix3}
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+\backmatter
+
+
+
+\end{document}
